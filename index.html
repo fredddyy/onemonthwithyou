@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Our Love Story ❤️</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#our-story" class="nav-link">Our Story</a></li>
+                <li><a href="#gallery" class="nav-link">Memories</a></li>
+                <li><a href="#puzzle" class="nav-link">Love Puzzle</a></li>
+                <li><a href="#letters" class="nav-link">Love Letters</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">To My Amazing Love</h1>
+                <p class="hero-subtitle">Every moment with you is a treasure, every day a new adventure</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('our-story').scrollIntoView({behavior: 'smooth'})">
+                        Start Our Journey
+                    </button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('letters').scrollIntoView({behavior: 'smooth'})">
+                        Read My Letters
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-hearts">
+                    <div class="heart heart-1">❤️</div>
+                    <div class="heart heart-2">💕</div>
+                    <div class="heart heart-3">💖</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="our-story" class="our-story">
+            <div class="container">
+                <h2 class="section-title">Our Love Story</h2>
+                <div class="story-intro">
+                    <p>From the moment we met until today, every chapter of our story has been written with love. Here are the moments that changed everything...</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">The Day We Met</div>
+                        <div class="timeline-content">
+                            <h3>A Beautiful Beginning</h3>
+                            <p>The moment our eyes met, everything changed. Little did I know that you would become my everything.</p>
+                        </div>
+                        <div class="timeline-heart">❤️</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Our First Date</div>
+                        <div class="timeline-content">
+                            <h3>Magic in the Air</h3>
+                            <p>Nervous laughter, shared dreams, and the feeling that I had known you forever.</p>
+                        </div>
+                        <div class="timeline-heart">❤️</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Falling in Love</div>
+                        <div class="timeline-content">
+                            <h3>My Heart Found Its Home</h3>
+                            <p>Every conversation, every smile, every moment together made me fall deeper in love with you.</p>
+                        </div>
+                        <div class="timeline-heart">❤️</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Today</div>
+                        <div class="timeline-content">
+                            <h3>Forever and Always</h3>
+                            <p>You are my best friend, my soulmate, my everything. I love you more with each passing day.</p>
+                        </div>
+                        <div class="timeline-heart">❤️</div>
+                    </div>
+                </div>
+                <div class="love-quote">
+                    <blockquote>
+                        "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."
+                        <cite>— Maya Angelou</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="photo-gallery">
+            <div class="container">
+                <h2 class="section-title">Our Beautiful Memories</h2>
+                <p class="gallery-intro">Every picture tells a story of our love. Here are some of my favorite moments with you.</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openModal('Our First Adventure', 'The beginning of forever')">
+                        <div class="photo-placeholder">
+                            <div class="photo-icon">📷</div>
+                            <div class="photo-overlay">
+                                <h3>Our First Adventure</h3>
+                                <p>The beginning of forever</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Perfect Moments', 'Every moment with you is perfect')">
+                        <div class="photo-placeholder">
+                            <div class="photo-icon">📷</div>
+                            <div class="photo-overlay">
+                                <h3>Perfect Moments</h3>
+                                <p>Every moment with you is perfect</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Laughing Together', 'Your smile lights up my world')">
+                        <div class="photo-placeholder">
+                            <div class="photo-icon">📷</div>
+                            <div class="photo-overlay">
+                                <h3>Laughing Together</h3>
+                                <p>Your smile lights up my world</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Beautiful Days', 'Making memories that last a lifetime')">
+                        <div class="photo-placeholder">
+                            <div class="photo-icon">📷</div>
+                            <div class="photo-overlay">
+                                <h3>Beautiful Days</h3>
+                                <p>Making memories that last a lifetime</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Love in Every Frame', 'You are my favorite work of art')">
+                        <div class="photo-placeholder">
+                            <div class="photo-icon">📷</div>
+                            <div class="photo-overlay">
+                                <h3>Love in Every Frame</h3>
+                                <p>You are my favorite work of art</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Forever Starts Now', 'Every day is a new adventure with you')">
+                        <div class="photo-placeholder">
+                            <div class="photo-icon">📷</div>
+                            <div class="photo-overlay">
+                                <h3>Forever Starts Now</h3>
+                                <p>Every day is a new adventure with you</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="upload-section">
+                    <h3>Add Your Special Photos</h3>
+                    <p>Upload your favorite memories together to make this gallery complete!</p>
+                    <div class="upload-area">
+                        <input type="file" id="photo-upload" multiple accept="image/*" style={{display: 'none'}} />
+                        <label for="photo-upload" class="upload-btn">
+                            <i class="fas fa-camera"></i>
+                            Choose Photos
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="puzzle" class="love-puzzle">
+            <div class="container">
+                <h2 class="section-title">Our Love Word Search</h2>
+                <p class="puzzle-intro">Find all the words that describe our amazing love story! Click and drag to select words.</p>
+                
+                <div class="puzzle-container">
+                    <div class="word-list">
+                        <h3>Words to Find:</h3>
+                        <ul id="wordsList">
+                            <li>LOVE</li>
+                            <li>HEART</li>
+                            <li>KISS</li>
+                            <li>HUG</li>
+                            <li>FOREVER</li>
+                            <li>ALWAYS</li>
+                            <li>SWEETHEART</li>
+                            <li>ROMANCE</li>
+                            <li>PASSION</li>
+                            <li>TOGETHER</li>
+                            <li>HAPPY</li>
+                            <li>SMILE</li>
+                            <li>DREAM</li>
+                            <li>SOULMATE</li>
+                        </ul>
+                        <div class="puzzle-stats">
+                            <p id="foundCount">Found: 0 / 14</p>
+                            <button class="reset-btn" onclick="resetPuzzle()">Reset Puzzle</button>
+                        </div>
+                    </div>
+                    
+                    <div class="grid-container">
+                        <div class="word-grid" id="wordGrid">
+                            <!-- Grid will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="letters" class="love-letters">
+            <div class="container">
+                <h2 class="section-title">My Love Letters To You</h2>
+                <p class="letters-intro">Each envelope holds a piece of my heart. Click on any envelope to read my love letters to you.</p>
+                
+                <div class="envelopes-grid">
+                    <div class="envelope" style="--accent-color: #ff6b9d" onclick="openLetter(1)">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-heart">❤️</div>
+                            <div class="envelope-number">1</div>
+                        </div>
+                    </div>
+                    <div class="envelope" style="--accent-color: #c44569" onclick="openLetter(2)">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-heart">❤️</div>
+                            <div class="envelope-number">2</div>
+                        </div>
+                    </div>
+                    <div class="envelope" style="--accent-color: #f8b500" onclick="openLetter(3)">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-heart">❤️</div>
+                            <div class="envelope-number">3</div>
+                        </div>
+                    </div>
+                    <div class="envelope" style="--accent-color: #ff6b9d" onclick="openLetter(4)">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-heart">❤️</div>
+                            <div class="envelope-number">4</div>
+                        </div>
+                    </div>
+                    <div class="envelope" style="--accent-color: #c44569" onclick="openLetter(5)">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-heart">❤️</div>
+                            <div class="envelope-number">5</div>
+                        </div>
+                    </div>
+                    <div class="envelope" style="--accent-color: #f8b500" onclick="openLetter(6)">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-heart">❤️</div>
+                            <div class="envelope-number">6</div>
+                        </div>
+                    </div>
+                    <div class="envelope" style="--accent-color: #ff6b9d" onclick="openLetter(7)">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-heart">❤️</div>
+                            <div class="envelope-number">7</div>
+                        </div>
+                    </div>
+                    <div class="envelope" style="--accent-color: #c44569" onclick="openLetter(8)">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-heart">❤️</div>
+                            <div class="envelope-number">8</div>
+                        </div>
+                    </div>
+                    <div class="envelope" style="--accent-color: #f8b500" onclick="openLetter(9)">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-body">
+                            <div class="envelope-heart">❤️</div>
+                            <div class="envelope-number">9</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="special-message">
+                    <p>💕 Every letter is a reminder of how much you mean to me 💕</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Our Love Story</h3>
+                    <p>Made with ❤️ for my amazing love</p>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#our-story">Our Story</a></li>
+                        <li><a href="#gallery">Memories</a></li>
+                        <li><a href="#puzzle">Love Puzzle</a></li>
+                        <li><a href="#letters">Love Letters</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hearts">
+                    <span class="heart-animation">❤️</span>
+                    <span class="heart-animation">💕</span>
+                    <span class="heart-animation">💖</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Created with endless love for you 💕 • Forever & Always</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Player -->
+    <div class="audio-player">
+        <audio id="bgMusic" loop src="background-music.mp3"></audio>
+        <div class="audio-controls">
+            <button class="play-button" id="playBtn" onclick="togglePlay()">
+                <i class="fas fa-play"></i>
+            </button>
+            
+            <div class="volume-controls">
+                <button class="mute-button" id="muteBtn" onclick="toggleMute()">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                
+                <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.1" value="0.3">
+            </div>
+            
+            <div class="music-indicator">
+                <span class="music-note">♪</span>
+                <span class="playing-text" id="playingText">Playing</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="photoModal" class="photo-modal" style="display: none;" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <div class="modal-photo">
+                <div class="photo-placeholder-large">
+                    <div class="photo-icon-large">📷</div>
+                </div>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle">Title</h3>
+                <p id="modalDescription">Description</p>
+                <div class="modal-hearts">
+                    <span>❤️ I love this moment with you! ❤️</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="letterModal" class="letter-modal" style="display: none;" onclick="closeLetterModal()">
+        <div class="letter-modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeLetterModal()">×</button>
+            <div class="letter-paper" id="letterPaper">
+                <div class="letter-header">
+                    <h3 id="letterTitle">Title</h3>
+                    <div class="letter-date">With all my love, always</div>
+                </div>
+                <div class="letter-body">
+                    <p id="letterMessage">Message</p>
+                </div>
+                <div class="letter-footer">
+                    <span>Forever yours,</span>
+                    <span>Your loving partner ❤️</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

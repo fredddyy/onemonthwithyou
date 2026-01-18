@@ -1,0 +1,263 @@
+.love-letters {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+
+.letters-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.envelopes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.envelope {
+  position: relative;
+  width: 250px;
+  height: 180px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.envelope:hover {
+  transform: translateY(-10px);
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: var(--accent-color);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.envelope:hover .envelope-flap {
+  transform: rotateX(180deg);
+  transform-origin: top;
+}
+
+.envelope-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+}
+
+.envelope-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  padding: 0.5rem;
+  max-height: 4rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  position: relative;
+  z-index: 3;
+}
+
+.envelope-heart {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.special-message {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.special-message p {
+  font-size: 1.2rem;
+  color: #ff6b9d;
+  font-weight: 500;
+}
+
+.letter-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.letter-modal-content {
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+}
+
+.close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.letter-paper {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  min-height: 400px;
+}
+
+.letter-paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--accent-color);
+  border-radius: 15px 15px 0 0;
+}
+
+.letter-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.letter-header h3 {
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.letter-date {
+  color: #999;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.letter-body {
+  margin-bottom: 2rem;
+}
+
+.letter-body p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.letter-footer {
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 2rem;
+}
+
+.letter-footer span {
+  display: block;
+  color: #666;
+  font-style: italic;
+}
+
+.letter-footer span:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.letter-footer span:last-child {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .envelopes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 600px;
+  }
+  
+  .envelope {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .envelope-flap {
+    height: 75px;
+  }
+  
+  .envelope-title {
+    font-size: 0.85rem;
+    padding: 0.3rem;
+  }
+  
+  .envelope-heart {
+    font-size: 1.5rem;
+  }
+  
+  .letter-paper {
+    padding: 2rem;
+    min-height: 350px;
+  }
+  
+  .letter-body p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .envelopes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 300px;
+  }
+  
+  .envelope {
+    width: 250px;
+    height: 180px;
+  }
+}

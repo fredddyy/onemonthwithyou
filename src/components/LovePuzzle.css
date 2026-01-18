@@ -1,0 +1,359 @@
+.love-puzzle {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
+}
+
+.love-quiz {
+  margin-bottom: 5rem;
+}
+
+.quiz-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-intro p {
+  margin-bottom: 1rem;
+}
+
+.quiz-questions {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.question-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.question-card h3 {
+  color: #ff6b9d;
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.option-btn {
+  background: white;
+  border: 2px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  color: #666;
+  text-align: left;
+}
+
+.option-btn:hover {
+  border-color: #ff6b9d;
+  background: #ffe0e0;
+  transform: translateY(-2px);
+}
+
+.option-btn.selected {
+  background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+  color: white;
+  border-color: #ff6b9d;
+}
+
+.quiz-submit {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.submit-quiz-btn {
+  background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.submit-quiz-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 157, 0.3);
+}
+
+.quiz-results {
+  text-align: center;
+}
+
+.results-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.results-card h3 {
+  color: #ff6b9d;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.results-card p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+.reset-quiz-btn {
+  background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.reset-quiz-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 157, 0.3);
+}
+
+.mama-game {
+  margin-bottom: 5rem;
+}
+
+.mama-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.mama-images {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  flex-wrap: wrap;
+}
+
+.mama-game-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mama-game-img:hover {
+  transform: scale(1.05);
+}
+
+.mama-puzzle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mama-grid {
+  display: grid;
+  grid-template-columns: repeat(11, 50px);
+  gap: 3px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mama-grid-cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.mama-grid-cell:hover {
+  background: #ffe0e0;
+  border-color: #ff6b9d;
+}
+
+.mama-grid-cell.selected {
+  background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+  color: white;
+  border-color: #ff6b9d;
+}
+
+.mama-status {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+.mama-success h3 {
+  color: #ff6b9d;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.mama-success p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.mama-instructions p {
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.reset-mama-btn {
+  background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-mama-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 157, 0.3);
+}
+
+
+
+
+
+.congrats-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.congrats-content {
+  background: white;
+  padding: 3rem;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 500px;
+}
+
+.congrats-content h2 {
+  color: #ff6b9d;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.congrats-content p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.congrats-content button {
+  background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.congrats-content button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 157, 0.3);
+}
+
+@media (max-width: 768px) {
+  .mama-images {
+    gap: 1rem;
+  }
+  
+  .mama-game-img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .mama-grid {
+    grid-template-columns: repeat(11, 35px);
+    gap: 2px;
+    padding: 1rem;
+  }
+  
+  .mama-grid-cell {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mama-images {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mama-game-img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .mama-grid {
+    grid-template-columns: repeat(11, 28px);
+    gap: 1px;
+    padding: 0.8rem;
+  }
+  
+  .mama-grid-cell {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+}
