@@ -1,19 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import  { useState } from 'react';
 import './LovePuzzle.css';
 
 const LovePuzzle = () => {
-  const [foundWords, setFoundWords] = useState([]);
-  const [selectedCells, setSelectedCells] = useState([]);
-  const [showCongrats, setShowCongrats] = useState(false);
+
   const [quizScore, setQuizScore] = useState(0);
   const [showQuizResults, setShowQuizResults] = useState(false);
   const [currentAnswers, setCurrentAnswers] = useState({});
 
-  const gridSize = 15;
-  const loveWords = [
-    'LOVE', 'HEART', 'KISS', 'HUG', 'FOREVER', 'ALWAYS', 'SWEETHEART', 
-    'ROMANCE', 'TOGETHER', 'HAPPY', 'SMILE', 'DREAM', 'SOULMATE'
-  ];
 
   const [mamaFound, setMamaFound] = useState(false);
   const [selectedMamaCells, setSelectedMamaCells] = useState([]);
@@ -59,54 +52,11 @@ const LovePuzzle = () => {
     }
   ];
 
-  const grid = [
-    ['L','O','V','E','H','U','G','F','O','R','E','V','E','R','S'],
-    ['O','H','E','A','R','T','K','I','S','S','T','O','G','E','T'],
-    ['V','A','L','W','A','Y','S','L','A','W','A','Y','S','H','O'],
-    ['E','R','M','A','N','C','E','P','A','S','S','I','O','N','G'],
-    ['R','O','M','A','N','C','E','H','A','P','P','Y','S','M','I'],
-    ['E','A','D','R','E','A','M','S','O','U','L','M','A','T','E'],
-    ['S','W','E','E','T','H','E','A','R','T','L','O','V','E','Y'],
-    ['O','U','L','M','A','T','E','F','O','R','E','V','E','R','O'],
-    ['U','G','H','T','O','G','E','T','H','E','R','H','A','P','P'],
-    ['L','M','A','T','E','S','W','E','E','T','H','E','A','R','T'],
-    ['M','A','T','E','L','O','V','E','R','O','M','A','N','C','E'],
-    ['A','T','E','S','W','E','E','T','H','E','A','R','T','L','O'],
-    ['T','E','S','W','E','E','T','H','E','A','R','T','L','O','V'],
-    ['E','S','W','E','E','T','H','E','A','R','T','L','O','V','E']
-  ];
 
-  const handleCellClick = (row, col) => {
-    const cellKey = `${row}-${col}`;
-    
-    if (selectedCells.includes(cellKey)) {
-      setSelectedCells(selectedCells.filter(cell => cell !== cellKey));
-    } else {
-      const newSelected = [...selectedCells, cellKey];
-      setSelectedCells(newSelected);
-      
-      // Check if selected cells form a word
-      const word = newSelected.map(cellKey => {
-        const [r, c] = cellKey.split('-').map(Number);
-        return grid[r][c];
-      }).join('');
-      
-      if (loveWords.includes(word) && !foundWords.includes(word)) {
-        setFoundWords([...foundWords, word]);
-        setSelectedCells([]);
-        
-        if (foundWords.length + 1 === loveWords.length) {
-          setShowCongrats(true);
-        }
-      }
-    }
-  };
 
-  const resetPuzzle = () => {
-    setFoundWords([]);
-    setSelectedCells([]);
-    setShowCongrats(false);
-  };
+
+
+ 
 
   const handleQuizAnswer = (questionIndex, selectedOption) => {
     setCurrentAnswers({...currentAnswers, [questionIndex]: selectedOption});
