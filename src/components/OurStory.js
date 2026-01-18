@@ -33,7 +33,7 @@ const OurStory = () => {
             </div>
 
             <div className="poem-stanza">
-              <p className="poem-line">And finally, because you're literally one (ire)</p>
+              <p className="poem-line">And finally, because you're literally one (<a href="https://houseofzelena.com/blogs/baby-name/ireoluwa?srsltid=AfmBOoqQm6ciZhPHxV7DPsVWbHEIbBTVoojuJG8gQVGLWeLwyjgKOrEc" target="_blank" rel="noopener noreferrer" className="poem-link">ire</a>)</p>
               <p className="poem-line">I leave a blessing for you</p>
               <p className="poem-line">In the name of the Lord Jesus,</p>
               <p className="poem-line">I ask our Father in heaven to cover and protect you in every room and space your footsteps into</p>
